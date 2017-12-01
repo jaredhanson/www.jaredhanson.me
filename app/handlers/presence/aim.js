@@ -1,4 +1,18 @@
+// https://web.archive.org/web/20060405222256/http://developer.aim.com:80/
 // https://web.archive.org/web/20060408125322/http://developer.aim.com:80/faq.jsp#presence
+// https://web.archive.org/web/20060405222525/http://developer.aim.com:80/presenceMain.jsp
+// https://help.aol.com/articles/aim-discontinued
+// https://en.wikipedia.org/wiki/AIM_(software)
+// https://en.wikipedia.org/wiki/OSCAR_protocol
+
+// other info on yahoo and skype
+// https://openacs.org/forums/message-view?message_id=405517
+
+// https://github.com/crazyguyonabike/AIMClientLogin/blob/master/src/main/java/AIMClientLogin.java#L79
+//  Keys can be managed at http://developer.aim.com/manageKeys.jsp
+
+// http://x.aim.com/OpenAIMPresentation/
+
 
 exports = module.exports = function() {
   var uri = require('url');
@@ -14,9 +28,8 @@ exports = module.exports = function() {
     url.query = {};
     url.query.k = process.env['AIM_KEY'];
     url.query.f = 'xml';
-    url.query.f = 'json';
+    //url.query.f = 'json';
     url.query.t = process.env['AIM_SCREENNAME'];
-    
     
     url = uri.format(url);
     
@@ -43,6 +56,8 @@ exports = module.exports = function() {
         var user = xml.children('data').children('users').children('user').first();
         state = user.children('state').text();
       }
+      
+      // onlineTime, etc are in seconds
       
       switch (state) {
       case 'offline':
