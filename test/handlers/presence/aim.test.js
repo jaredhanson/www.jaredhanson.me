@@ -13,6 +13,86 @@ describe('handlers/presence/aim', function() {
   
   describe('handler', function() {
     
+    describe('online in JSON', function() {
+      var requestStub = { get: function(url, cb){} }
+      sinon.stub(requestStub, 'get').yields(null,
+        {
+          statusCode: 200,
+          headers: {
+            date: 'Fri, 01 Dec 2017 01:23:31 GMT',
+            pragma: 'no-cache',
+            'cache-control': 'no-store,no-cache,must-revalidate',
+            'content-type': 'application/json;charset=UTF-8'
+          }
+        },
+'{"response":{"statusCode":200, "statusText":"Ok", "data":{"users":[{"aimId":"johndoe@mac.com", "displayId":"johndoe@mac.com", "friendly":"John Doe", "state":"online", "onlineTime":7897, "maxIMSize":3987, "invisible":0, "userType":"aim", "buddyIcon":"http://o.aimcdn.net/e/1/0000xxx000x00x0x000xxx000x000xxxx0x0", "presenceIcon":"http://o.aolcdn.com/aim/img/online.gif", "gOTR":0, "offTheRecord":0}]}}}'
+        );
+      
+      
+      var response;
+    
+      before(function(done) {
+        var factory = $require('../../../app/handlers/presence/aim',
+          { 'request': requestStub });
+        
+        var handler = factory();
+      
+        chai.express.handler(handler)
+          .end(function(res) {
+            response = res;
+            done();
+          })
+          .dispatch();
+      });
+    
+      it('should redirect', function() {
+        expect(response.statusCode).to.equal(200);
+        expect(response.body).to.deep.equal({ show: 'available' });
+      });
+    
+    }); // online in JSON
+    
+    describe('online in XML', function() {
+      var requestStub = { get: function(url, cb){} }
+      sinon.stub(requestStub, 'get').yields(null,
+        {
+          statusCode: 200,
+          headers: {
+            date: 'Fri, 01 Dec 2017 01:21:06 GMT',
+            pragma: 'no-cache',
+            'cache-control': 'no-store,no-cache,must-revalidate',
+            'content-type': 'text/xml;charset=UTF-8'
+          }
+        },
+'<?xml version="1.0" encoding="UTF-8"?>' +
+'<response xmlns="http://developer.aim.com/xsd/presence.xsd"><statusCode>200</statusCode><statusText>Ok</statusText><data><users><user><aimId>johndoe@mac.com</aimId><displayId>johndoe@mac.com</displayId><friendly>John Doe</friendly><state>online</state><onlineTime>7752</onlineTime><maxIMSize>3987</maxIMSize><invisible>0</invisible><userType>aim</userType><buddyIcon>http://o.aimcdn.net/e/1/0000xxx000x00x0x000xxx000x000xxxx0x0</buddyIcon><presenceIcon>http://o.aolcdn.com/aim/img/online.gif</presenceIcon><gOTR>0</gOTR><offTheRecord>0</offTheRecord></user></users></data></response>'
+        );
+      
+      
+      var response;
+    
+      before(function(done) {
+        var factory = $require('../../../app/handlers/presence/aim',
+          { 'request': requestStub });
+        
+        var handler = factory();
+      
+        chai.express.handler(handler)
+          .end(function(res) {
+            response = res;
+            done();
+          })
+          .dispatch();
+      });
+    
+      it('should redirect', function() {
+        expect(response.statusCode).to.equal(200);
+        expect(response.body).to.deep.equal({ show: 'available' });
+      });
+    
+    }); // online in XML
+    
+    
     describe('away in JSON', function() {
       var requestStub = { get: function(url, cb){} }
       sinon.stub(requestStub, 'get').yields(null,
@@ -92,6 +172,85 @@ describe('handlers/presence/aim', function() {
     
     }); // away in XML
     
+    
+    describe('offline in JSON', function() {
+      var requestStub = { get: function(url, cb){} }
+      sinon.stub(requestStub, 'get').yields(null,
+        {
+          statusCode: 200,
+          headers: {
+            date: 'Fri, 01 Dec 2017 01:14:06 GMT',
+            pragma: 'no-cache',
+            'cache-control': 'no-store,no-cache,must-revalidate',
+            'content-type': 'application/json;charset=UTF-8'
+          }
+        },
+'{"response":{"statusCode":200, "statusText":"Ok", "data":{"users":[{"aimId":"johndoe@mac.com", "displayId":"johndoe@mac.com", "friendly":"John Doe", "state":"offline", "maxIMSize":3987, "invisible":0, "userType":"aim", "buddyIcon":"http://o.aimcdn.net/e/1/0110efa251f23b7e754cdc853f498ccef4a1", "presenceIcon":"http://o.aolcdn.com/aim/img/offline.gif", "gOTR":0, "offTheRecord":0}]}}}'
+        );
+      
+      
+      var response;
+    
+      before(function(done) {
+        var factory = $require('../../../app/handlers/presence/aim',
+          { 'request': requestStub });
+        
+        var handler = factory();
+      
+        chai.express.handler(handler)
+          .end(function(res) {
+            response = res;
+            done();
+          })
+          .dispatch();
+      });
+    
+      it('should redirect', function() {
+        expect(response.statusCode).to.equal(200);
+        expect(response.body).to.deep.equal({ show: 'offline' });
+      });
+    
+    }); // offlien in JSON
+    
+    describe('offline in XML', function() {
+      var requestStub = { get: function(url, cb){} }
+      sinon.stub(requestStub, 'get').yields(null,
+        {
+          statusCode: 200,
+          headers: {
+            date: 'Fri, 01 Dec 2017 01:28:30 GMT',
+            pragma: 'no-cache',
+            'cache-control': 'no-store,no-cache,must-revalidate',
+            'content-type': 'text/xml;charset=UTF-8'
+          }
+        },
+'<?xml version="1.0" encoding="UTF-8"?>\n' +
+'<response xmlns="http://developer.aim.com/xsd/presence.xsd"><statusCode>200</statusCode><statusText>Ok</statusText><data><users><user><aimId>johndoe@mac.com</aimId><displayId>johndoe@mac.com</displayId><friendly>John Doe</friendly><state>offline</state><maxIMSize>3987</maxIMSize><invisible>0</invisible><userType>aim</userType><buddyIcon>http://o.aimcdn.net/e/1/0110efa251f23b7e754cdc853f498ccef4a1</buddyIcon><presenceIcon>http://o.aolcdn.com/aim/img/offline.gif</presenceIcon><gOTR>0</gOTR><offTheRecord>0</offTheRecord></user></users></data></response>'
+        );
+      
+      
+      var response;
+    
+      before(function(done) {
+        var factory = $require('../../../app/handlers/presence/aim',
+          { 'request': requestStub });
+        
+        var handler = factory();
+      
+        chai.express.handler(handler)
+          .end(function(res) {
+            response = res;
+            done();
+          })
+          .dispatch();
+      });
+    
+      it('should redirect', function() {
+        expect(response.statusCode).to.equal(200);
+        expect(response.body).to.deep.equal({ show: 'offline' });
+      });
+    
+    }); // offline in XML
     
     describe('mobile in JSON', function() {
       var requestStub = { get: function(url, cb){} }

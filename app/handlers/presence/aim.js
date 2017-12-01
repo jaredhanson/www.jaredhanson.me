@@ -13,7 +13,7 @@ exports = module.exports = function() {
     console.log(url);
     url.query = {};
     url.query.k = process.env['AIM_KEY'];
-    url.query.f = 'xml';
+    url.query.f = 'json';
     //url.query.f = 'json';
     url.query.t = process.env['AIM_SCREENNAME'];
     
