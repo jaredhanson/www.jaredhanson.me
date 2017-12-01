@@ -330,6 +330,236 @@ describe('handlers/presence/aim', function() {
       });
     
     }); // mobile in XML
+    
+    
+    describe.skip('error due to missing format', function() {
+      // missing `f` parameter
+      
+      var requestStub = { get: function(url, cb){} }
+      sinon.stub(requestStub, 'get').yields(null,
+        {
+          statusCode: 415,
+          headers: {
+            'content-type': 'text/plain'
+          }
+        },
+''
+        );
+      
+      
+      var response;
+    
+      before(function(done) {
+        var factory = $require('../../../app/handlers/presence/aim',
+          { 'request': requestStub });
+        
+        var handler = factory();
+      
+        chai.express.handler(handler)
+          .end(function(res) {
+            response = res;
+            done();
+          })
+          .dispatch();
+      });
+    
+      it('should redirect', function() {
+        expect(response.statusCode).to.equal(200);
+        expect(response.body).to.deep.equal({ show: 'offline' });
+      });
+    
+    }); // offline in XML
+    
+    describe.skip('error due to missing format', function() {
+      // missing `f` parameter
+      
+      var requestStub = { get: function(url, cb){} }
+      sinon.stub(requestStub, 'get').yields(null,
+        {
+          statusCode: 415,
+          headers: {
+            'content-type': 'text/plain'
+          }
+        },
+''
+        );
+      
+      
+      var response;
+    
+      before(function(done) {
+        var factory = $require('../../../app/handlers/presence/aim',
+          { 'request': requestStub });
+        
+        var handler = factory();
+      
+        chai.express.handler(handler)
+          .end(function(res) {
+            response = res;
+            done();
+          })
+          .dispatch();
+      });
+    
+      it('should redirect', function() {
+        expect(response.statusCode).to.equal(200);
+        expect(response.body).to.deep.equal({ show: 'offline' });
+      });
+    
+    }); // error due to missing format
+    
+    describe.skip('JSON error due to missing parameter', function() {
+      // missing `f` parameter
+      
+      var requestStub = { get: function(url, cb){} }
+      sinon.stub(requestStub, 'get').yields(null,
+        {
+          statusCode: 200,
+          headers: {
+            'content-type': 'application/json;charset=UTF-8'
+          }
+        },
+'{"response":{"statusCode":460, "statusText":"Missing required parameter (k)", "data":{}}}'
+        );
+      
+      
+      var response;
+    
+      before(function(done) {
+        var factory = $require('../../../app/handlers/presence/aim',
+          { 'request': requestStub });
+        
+        var handler = factory();
+      
+        chai.express.handler(handler)
+          .end(function(res) {
+            response = res;
+            done();
+          })
+          .dispatch();
+      });
+    
+      it('should redirect', function() {
+        expect(response.statusCode).to.equal(200);
+        expect(response.body).to.deep.equal({ show: 'offline' });
+      });
+    
+    }); // error due to missing format
+    
+    describe.skip('XML error due to missing parameter', function() {
+      // missing `f` parameter
+      
+      var requestStub = { get: function(url, cb){} }
+      sinon.stub(requestStub, 'get').yields(null,
+        {
+          statusCode: 200,
+          headers: {
+            'content-type': 'text/xml;charset=UTF-8'
+          }
+        },
+'<?xml version="1.0" encoding="UTF-8"?>\n' +
+'<response xmlns="http://developer.aim.com/xsd/presence.xsd"><statusCode>460</statusCode><statusText>Missing required parameter (k)</statusText><data></data></response>'
+        );
+      
+      
+      var response;
+    
+      before(function(done) {
+        var factory = $require('../../../app/handlers/presence/aim',
+          { 'request': requestStub });
+        
+        var handler = factory();
+      
+        chai.express.handler(handler)
+          .end(function(res) {
+            response = res;
+            done();
+          })
+          .dispatch();
+      });
+    
+      it('should redirect', function() {
+        expect(response.statusCode).to.equal(200);
+        expect(response.body).to.deep.equal({ show: 'offline' });
+      });
+    
+    }); // error due to missing format
+    
+    describe.skip('JSON error due to invalid key', function() {
+      // missing `f` parameter
+      
+      var requestStub = { get: function(url, cb){} }
+      sinon.stub(requestStub, 'get').yields(null,
+        {
+          statusCode: 200,
+          headers: {
+            'content-type': 'application/json;charset=UTF-8'
+          }
+        },
+'{"response":{"statusCode":440, "statusText":"Invalid key received from *johndoe@mac.com*", "data":{}}}'
+        );
+      
+      
+      var response;
+    
+      before(function(done) {
+        var factory = $require('../../../app/handlers/presence/aim',
+          { 'request': requestStub });
+        
+        var handler = factory();
+      
+        chai.express.handler(handler)
+          .end(function(res) {
+            response = res;
+            done();
+          })
+          .dispatch();
+      });
+    
+      it('should redirect', function() {
+        expect(response.statusCode).to.equal(200);
+        expect(response.body).to.deep.equal({ show: 'offline' });
+      });
+    
+    }); // error due to missing format
+    
+    describe.skip('XML error due to invalid key', function() {
+      
+      var requestStub = { get: function(url, cb){} }
+      sinon.stub(requestStub, 'get').yields(null,
+        {
+          statusCode: 200,
+          headers: {
+            'content-type': 'text/xml;charset=UTF-8'
+          }
+        },
+'<?xml version="1.0" encoding="UTF-8"?>\n' +
+'<response xmlns="http://developer.aim.com/xsd/presence.xsd"><statusCode>440</statusCode><statusText>Invalid key received from *johndoe@mac.com*</statusText><data></data></response>'
+        );
+      
+      
+      var response;
+    
+      before(function(done) {
+        var factory = $require('../../../app/handlers/presence/aim',
+          { 'request': requestStub });
+        
+        var handler = factory();
+      
+        chai.express.handler(handler)
+          .end(function(res) {
+            response = res;
+            done();
+          })
+          .dispatch();
+      });
+    
+      it('should redirect', function() {
+        expect(response.statusCode).to.equal(200);
+        expect(response.body).to.deep.equal({ show: 'offline' });
+      });
+    
+    }); // error due to missing format
   
   }); // handler
   
