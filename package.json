@@ -1,0 +1,27 @@
+{
+  "name": "www.jaredhanson.me",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+    "bixby": "^0.1.6",
+    "bixby-common": "^0.1.3",
+    "bixby-express": "^0.1.7",
+    "bixby-http": "^0.1.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "request": "^2.83.0",
+    "xtraverse": "^0.1.0"
+  },
+  "engines": {
+    "node": "6.10.3"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-express-handler": "0.0.2",
+    "make-node": "^0.3.5",
+    "mocha": "^4.0.1",
+    "proxyquire": "^1.8.0",
+    "sinon": "^4.1.2"
+  }
+}
