@@ -14,6 +14,7 @@ exports = module.exports = function() {
     url.query = {};
     url.query.k = process.env['AIM_KEY'];
     url.query.f = 'xml';
+    //url.query.f = 'json';
     url.query.t = process.env['AIM_SCREENNAME'];
     
     
@@ -28,11 +29,21 @@ exports = module.exports = function() {
       }
       console.log(body);
       
-      var xml = XML(body)
-        , pres = {};
+      var pres = {}
+        , state;
       
-      var user = xml.children('data').children('users').children('user').first();
-      var state = user.children('state').text();
+      try {
+        json = JSON.parse(body);
+        var user = json.response.data.users[0];
+        state = user.state;
+        
+      } catch (ex) {
+        var xml = XML(body);
+      
+        var user = xml.children('data').children('users').children('user').first();
+        state = user.children('state').text();
+      }
+      
       switch (state) {
       case 'offline':
         pres.show = 'offline';
