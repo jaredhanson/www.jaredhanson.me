@@ -4,3 +4,6 @@ TESTS = test/*.test.js test/**/*.test.js
 
 MOCHAFLAGS = --require ./test/bootstrap/node
 
+
+pages:
+	node site
