@@ -7,3 +7,6 @@ MOCHAFLAGS = --require ./test/bootstrap/node
 
 pages:
 	node site
+
+deploy:
+	gcloud app
