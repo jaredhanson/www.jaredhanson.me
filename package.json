@@ -11,6 +11,7 @@
     "bixby-express": "^0.2.0",
     "bixby-http": "^0.2.0",
     "bixby-ms": "github:bixbyjs/bixby-ms",
+    "crane": "github:jaredhanson/crane",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "nodex-social-linkback": "git+https://github.com/modulate/nodex-social-notifications-linkback.git",
