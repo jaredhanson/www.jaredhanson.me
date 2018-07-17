@@ -5,7 +5,7 @@
   "scripts": {},
   "dependencies": {
     "@modulate/bixby-ms-gcp": "git+https://github.com/modulate/bixby-ms-gcp.git",
-    "@modulate/social-trackback": "git+https://github.com/modulate/nodex-social-trackback.git",
+    "@modulate/social-notifications-trackback": "git+https://github.com/modulate/nodex-social-notifications-trackback.git",
     "bixby": "^0.2.0",
     "bixby-common": "^0.1.3",
     "bixby-express": "^0.2.0",
@@ -13,7 +13,7 @@
     "bixby-ms": "github:bixbyjs/bixby-ms",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
-    "nodex-social-linkback": "git+https://github.com/modulate/nodex-social-linkback.git",
+    "nodex-social-linkback": "git+https://github.com/modulate/nodex-social-notifications-linkback.git",
     "pug": "^2.0.0-rc.4",
     "request": "^2.83.0",
     "xtraverse": "^0.1.0"

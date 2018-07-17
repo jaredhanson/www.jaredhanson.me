@@ -1,4 +1,4 @@
-exports = module.exports = function(aim, pubsub, trackbackService, logging) {
+exports = module.exports = function(aim, pushDeliveryService, trackbackService, logging) {
   var express = require('express');
   var path = require('path');
   
@@ -9,7 +9,7 @@ exports = module.exports = function(aim, pubsub, trackbackService, logging) {
   service.get('/presence/aim', aim);
   
   
-  service.post('/pubsub/push', pubsub);
+  service.use('/pubsub/push', pushDeliveryService);
   
   service.use('/trackback', trackbackService)
   
@@ -22,7 +22,7 @@ exports = module.exports = function(aim, pubsub, trackbackService, logging) {
 exports['@implements'] = 'http://i.bixbyjs.org/http/Service';
 exports['@require'] = [
   './handlers/presence/aim',
-  './handlers/pubsub',
-  'http://schemas.modulate.io/js/http/TrackBackService',
+  'http://schemas.modulate.io/js/cloud/gcp/pubsub/HTTPPushDeliveryService',
+  'http://schemas.modulate.io/js/social/notifications/trackback/HTTPService',
   'http://i.bixbyjs.org/http/middleware/logging'
 ];
