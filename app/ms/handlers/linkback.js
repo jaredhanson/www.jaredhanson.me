@@ -1,12 +1,10 @@
 exports = module.exports = function() {
   function handle(msg, next) {
-    console.log('LINKBACK MESSAGE!');
-    
     if (msg.data) {
-      console.log(msg.data.toString());
+      console.log('linkback: ' + msg.data.toString());
     }
-    console.log(msg.body)
-    //msg.ack();
+    //console.log(msg.body)
+    msg.ack();
   }
   
   return [ handle ];
