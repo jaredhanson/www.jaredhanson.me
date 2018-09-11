@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {},
   "dependencies": {
-    "@modulate/bixby-ms-gcp": "git+https://github.com/modulate/bixby-ms-gcp.git",
     "@modulate/social-notifications-trackback": "git+https://github.com/modulate/nodex-social-notifications-trackback.git",
     "bixby": "^0.2.0",
     "bixby-common": "^0.1.3",
@@ -18,6 +17,12 @@
     "pug": "^2.0.0-rc.4",
     "request": "^2.83.0",
     "xtraverse": "^0.1.0"
+  },
+  "x_dependencies": {
+    "bixby-ms": "github:bixbyjs/bixby-ms",
+    "bixby-ms-amqp": "github:bixbyjs/bixby-ms-amqp",
+    "bixby-ms-zeromq": "github:bixbyjs/bixby-ms-zeromq",
+    "@modulate/bixby-ms-gcp": "git+https://github.com/modulate/bixby-ms-gcp.git"
   },
   "engines": {
     "node": "8.x.x"
