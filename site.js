@@ -12,6 +12,7 @@ site.locals.pretty = true;
 site.engine('pug', require('pug'));
 
 site.content('content');
+site.use('/blog', require('kerouac-blog')({ layout: 'blog' }));
 
 site.generate(function(err) {
   console.log('DONE!');
