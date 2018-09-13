@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {},
   "dependencies": {
+    "@kerouac/main": "0",
+    "@kerouac/robots": "0.0.1",
+    "@kerouac/sitemap": "0.0.1",
     "@modulate/social-notifications-trackback": "git+https://github.com/modulate/nodex-social-notifications-trackback.git",
     "bixby": "^0.2.0",
     "bixby-common": "^0.1.3",
