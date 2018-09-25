@@ -1,2 +1,2 @@
 require('dotenv').load();
-require('bixby')(undefined, 'org.kerouacjs/main');
+require('bixby')('org.kerouacjs/main');
