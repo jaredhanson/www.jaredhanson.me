@@ -15,3 +15,21 @@
 p {
 	margin: 0 0 2em 0;
 }
+
+body {
+	background: #fff;
+	color: #a2a2a2;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: 400;
+	line-height: 1.75em;
+}
+
+a {
+	color: #49bf9d;
+	text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
