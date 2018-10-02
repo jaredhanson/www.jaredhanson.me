@@ -1,0 +1,28 @@
+doctype html
+html(prefix='og: http://ogp.me/ns#', lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='/assets/styles/all.css')
+    
+  body
+    header#header
+      .inner
+        a.image.avatar(href='/', title='Jared Hanson')
+          img(src='images/avatar.jpg')
+        h1 Hello, I'm Jared, a software engineer and identity management expert.
+      
+    div#main
+      section
+        header
+          h2 Ipsum lorem dolor aliquam ante commodo magna sed accumsan arcu neque.
+        |!{content} 
+
+    footer#footer
+      .inner
+        ul.icons
+          li
+            a.icon.fa-twitter
+              span Twitter
+        ul.copyright
+          li Untitled

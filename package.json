@@ -37,6 +37,7 @@
     "kerouac-blog": "0",
     "make-node": "^0.3.5",
     "mocha": "^5.2.0",
+    "node-sass": "^4.9.3",
     "proxyquire": "^2.1.0",
     "sinon": "^6.1.3"
   }
