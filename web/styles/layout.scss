@@ -262,6 +262,38 @@ header.major h2 {
 				color: inherit;
 			}
   
+      // In media query
+			#x-footer {
+				background-attachment: scroll;
+				background-color: #1f1815;
+				background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+				background-position: top left,						bottom center;
+				background-repeat: repeat,							no-repeat;
+				background-size: auto,							cover;
+				bottom: auto;
+				left: auto;
+				padding: 4em 4em 6em 4em;
+				x-position: relative;
+				text-align: center;
+				x-width: 100%;
+			}
+
+				#x-footer .icons {
+					margin: 0 0 1em 0;
+				}
+
+				#x-footer .copyright {
+					margin: 0 0 1em 0;
+				}
+
+					#x-footer .copyright li {
+						border-left-width: 1px;
+						display: inline-block;
+						line-height: 1em;
+						margin-left: 0.75em;
+						padding-left: 0.75em;
+					}
+  
   
   
 	#main {
