@@ -1,5 +1,9 @@
-extends ../layout
+extends ./layout
 
-block content
-  h1 'Blog Feed'
-  |!{ content }
+block feed
+  .hfeed
+    each post in posts
+      article.hentry
+        h1.entry-title= post.title
+        .entry-content
+          |!{ post.content }
