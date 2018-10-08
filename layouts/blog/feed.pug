@@ -4,6 +4,7 @@ block feed
   .hfeed
     each post in posts
       article.hentry
-        h1.entry-title= post.title
+        h1
+          a(rel='bookmark', href=post.absoluteURL)= post.title
         .entry-content
           |!{ post.content }
