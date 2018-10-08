@@ -9,6 +9,8 @@ block feed
     h1.entry-title
       a(rel='bookmark', href=absoluteURL)= title
     p.metadata
-      time.published(title=publishedAt.toISOString()) #{publishedMoment.format('dddd, MMMM D, YYYY')}
+      time.published(datetime=publishedAt.toISOString())= publishedMoment.format('dddd, MMMM D, YYYY')
+      address.author.vcard
+        span.fn= author.name
     .entry-content
       |!{ content }
