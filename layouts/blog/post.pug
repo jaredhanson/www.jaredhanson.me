@@ -2,15 +2,13 @@
   Blog layout
 //-
 
-extends ../layout
+extends ./layout
 
-block content
+block feed
   article.hentry
-    h1.entry-title= title
+    h1.entry-title
+      a(rel='bookmark', href=absoluteURL)= title
+    p.metadata
+      time.published(title=publishedAt.toISOString()) #{publishedMoment.format('dddd, MMMM D, YYYY')}
     .entry-content
       |!{ content }
-    div
-      span.author
-        span.fn Jared
-      abbr(class='published', title=publishedAt.toISOString().substring(0,19)+'Z') #{createdAt}
-      
