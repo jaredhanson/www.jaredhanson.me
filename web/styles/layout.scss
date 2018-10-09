@@ -315,3 +315,42 @@ header.major h2 {
 				margin-top: 0;
 				padding-top: 0;
 			}
+      
+      
+header {
+  border: 1px solid green;
+  @include clearfix;
+}
+      
+#brand img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid red;
+  vertical-align: top;
+  float: left;
+}
+
+#brand .text {
+  border: 1px solid purple;
+  float: left;
+  
+  a {
+    color: #333;
+  }
+  
+  h1 {
+    border: 1px solid yellow;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  p {
+    display: inline;
+    font-size: 14px;
+    
+    a {
+      color: #657786;
+    }
+  }
+}

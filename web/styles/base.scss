@@ -13,11 +13,11 @@
    ========================================================================== */
 
 html {
-	box-sizing: border-box;
+	x-box-sizing: border-box;
 }
 
 *, *:before, *:after {
-	box-sizing: inherit;
+	x-box-sizing: inherit;
 }
 
 p {
@@ -26,15 +26,15 @@ p {
 
 body {
 	background: #fff;
-	color: #a2a2a2;
-	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	color: #333;
+	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 	font-size: 16pt;
 	font-weight: 400;
 	line-height: 1.75em;
 }
 
 a {
-	color: #49bf9d;
+  color: #06c;
 	text-decoration: none;
   
   &:hover {

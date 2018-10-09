@@ -1,7 +1,14 @@
 extends ../layout
 
 block content
-  h1
-    a(href='/blog/') Jared's Blog
+  header
+    #brand
+      a(href='/')
+        img(src='/images/avatar.jpg')
+      .text
+        h1
+          a(href='/blog/') Blog
+        p
+          a(href='http://www.jaredhanson.me/') www.jaredhanson.me
 
   block feed
