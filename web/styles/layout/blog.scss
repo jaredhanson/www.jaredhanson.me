@@ -1,5 +1,16 @@
-.hfeed {
-  border: 1px solid blue;
-  width: 680px;
+#feed {
+  float: left;
+  width: 638px;
   margin: 0 auto;
+  border: 1px solid blue;
+}
+
+#sidebar {
+  float: right;
+  width: 318px;
+  border: 1px solid red;
+
+  img {
+    margin: 10px;
+  }
 }

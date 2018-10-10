@@ -2,13 +2,20 @@ extends ../layout
 
 block content
   header
-    #brand
-      a(href='/')
-        img(src='/images/avatar.jpg')
-      .text
-        h1
-          a(href='/blog/') Jared Hanson's Blog
-        p
-          a(href='/') jaredhanson.me
+    .wrapper
+      #brand
+        a(href='/')
+          img(src='/images/avatar.jpg')
+        .text
+          h1
+            a(href='/blog/') Jared Hanson's Blog
+          p
+            a(href='/') jaredhanson.me
 
-  block feed
+  .wrapper
+    block feed
+
+    #sidebar
+      p I'm Jared, a software engineer and identity management expert, as well as security and privacy.
+    
+      img(src='https://storage.googleapis.com/support-kms-prod/SNP_2954603_en_v0', width=300, height=250)
