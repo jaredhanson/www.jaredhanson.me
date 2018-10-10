@@ -329,6 +329,7 @@ header {
 
 #brand img {
   float: left;
+  box-sizing: content-box;
   width: 36px;
   height: 36px;
   margin-right: 10px;
@@ -341,6 +342,7 @@ header {
   padding: 8px 0;
   
   h1 {
+    margin: 0;
     font-size: 18px;
     font-weight: bold;
     line-height: 1.3;
