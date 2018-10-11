@@ -39,6 +39,10 @@ body {
 
 p {
   margin-top: 0;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
