@@ -8,9 +8,13 @@
    selectors, rather than class or ID selectors.  Such rules, if necessary,
    should be placed into component-specific style sheets.
   
+   These styles are heavily inspired by [Milligram](https://milligram.io/), a
+   minimalist CSS framework wich is, in turn, similar to [Skeleton](http://getskeleton.com/).
+  
    References:
      - [Base Rules](https://smacss.com/book/type-base)
    ========================================================================== */
+
 
 /**
  * 1. Set to 62.5% so that all the rem measurements are based on 10px sizing.
