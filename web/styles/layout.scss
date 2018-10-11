@@ -11,36 +11,6 @@
    ========================================================================== */
 
 
-x-header p {
-	color: #b2b2b2;
-	position: relative;
-	margin: 0 0 1.5em 0;
-  border: 1px solid green;
-}
-
-header h2 + p {
-	font-size: 1.25em;
-	margin-top: -1em;
-	line-height: 1.5em;
-}
-
-header h3 + p {
-	font-size: 1.1em;
-	margin-top: -0.8em;
-	line-height: 1.5em;
-}
-
-header h4 + p,
-header h5 + p,
-header h6 + p {
-	font-size: 0.9em;
-	margin-top: -0.6em;
-	line-height: 1.5em;
-}
-
-header.major h2 {
-	font-size: 2em;
-}
 
 .image {
 	border-radius: 0.35em;
@@ -65,43 +35,6 @@ header.major h2 {
 		top: 0;
 		width: 100%;
 	}
-
-	.image.thumb {
-		text-align: center;
-	}
-
-		.image.thumb:after {
-			-moz-transition: opacity 0.2s ease-in-out;
-			-webkit-transition: opacity 0.2s ease-in-out;
-			-ms-transition: opacity 0.2s ease-in-out;
-			transition: opacity 0.2s ease-in-out;
-			border-radius: 0.35em;
-			border: solid 3px rgba(255, 255, 255, 0.5);
-			color: #fff;
-			content: 'View';
-			display: inline-block;
-			font-size: 0.8em;
-			font-weight: 400;
-			left: 50%;
-			line-height: 2.25em;
-			margin: -1.25em 0 0 -3em;
-			opacity: 0;
-			padding: 0 1.5em;
-			position: absolute;
-			text-align: center;
-			text-decoration: none;
-			top: 50%;
-			white-space: nowrap;
-		}
-
-		.image.thumb:hover:after {
-			opacity: 1.0;
-		}
-
-		.image.thumb:hover:before {
-			background: url("images/overlay.png"), url("images/overlay.png");
-			opacity: 1.0;
-		}
 
 	.image img {
 		border-radius: 0.35em;
