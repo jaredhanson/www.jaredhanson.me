@@ -56,7 +56,7 @@
 
 
 
-#header {
+#hero {
   border: 1px solid blue;
 	display: -moz-flex;
 	display: -webkit-flex;
@@ -90,7 +90,7 @@
 	width: 35%;
 }
 
-	#header > * {
+	#hero > * {
 		-moz-flex-shrink: 0;
 		-webkit-flex-shrink: 0;
 		-ms-flex-shrink: 0;
@@ -98,7 +98,7 @@
 		width: 100%;
 	}
 
-	#header > .inner {
+	#hero > .inner {
 		-moz-flex-grow: 1;
 		-webkit-flex-grow: 1;
 		-ms-flex-grow: 1;
@@ -106,22 +106,22 @@
 		margin: 0 0 2em 0;
 	}
 
-	#header strong, #header b {
+	#hero strong, #hero b {
 		color: #ffffff;
 	}
 
-	#header h2, #header h3, #header h4, #header h5, #header h6 {
+	#hero h2, #hero h3, #hero h4, #hero h5, #hero h6 {
 		color: #ffffff;
 	}
 
-	#header h1 {
+	#hero h1 {
 		color: rgba(255, 255, 255, 0.5);
 		font-size: 1.35em;
 		line-height: 1.75em;
 		margin: 0;
 	}
 
-	#header .image.avatar {
+	#hero .image.avatar {
 		margin: 0 0 1em 0;
 		width: 6.25em;
 	}
