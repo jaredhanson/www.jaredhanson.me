@@ -4,13 +4,13 @@
     float: left;
     width: 640px;
     margin: 0 auto;
-    border: 1px solid blue;
+    x-border: 1px solid blue;
   }
 
   aside {
     float: right;
     width: 320px;
-    border: 1px solid red;
+    x-border: 1px solid red;
 
     img {
       margin: 10px;

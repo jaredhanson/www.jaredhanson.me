@@ -41,90 +41,8 @@
 		display: block;
 	}
 
-	.image.avatar {
-		border-radius: 100%;
-	}
-
-		.image.avatar:before {
-			display: none;
-		}
-
-		.image.avatar img {
-			border-radius: 100%;
-			width: 100%;
-		}
 
 
-
-#hero {
-  border: 1px solid blue;
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: -ms-flex;
-	display: flex;
-	-moz-flex-direction: column;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-moz-align-items: -moz-flex-end;
-	-webkit-align-items: -webkit-flex-end;
-	-ms-align-items: -ms-flex-end;
-	align-items: flex-end;
-	-moz-justify-content: space-between;
-	-webkit-justify-content: space-between;
-	-ms-justify-content: space-between;
-	justify-content: space-between;
-	background-color: #1f1815;
-	background-attachment: scroll,								scroll;
-	background-image: url("images/overlay.png"), url("../../images/bg.jpg");
-	background-position: top left,							top left;
-	background-repeat: repeat,								no-repeat;
-	background-size: auto,								150%;
-	color: rgba(255, 255, 255, 0.5);
-	height: 100%;
-	left: 0;
-	padding: 8em 4em;
-	position: fixed;
-	text-align: right;
-	top: 0;
-	width: 35%;
-}
-
-	#hero > * {
-		-moz-flex-shrink: 0;
-		-webkit-flex-shrink: 0;
-		-ms-flex-shrink: 0;
-		flex-shrink: 0;
-		width: 100%;
-	}
-
-	#hero > .inner {
-		-moz-flex-grow: 1;
-		-webkit-flex-grow: 1;
-		-ms-flex-grow: 1;
-		flex-grow: 1;
-		margin: 0 0 2em 0;
-	}
-
-	#hero strong, #hero b {
-		color: #ffffff;
-	}
-
-	#hero h2, #hero h3, #hero h4, #hero h5, #hero h6 {
-		color: #ffffff;
-	}
-
-	#hero h1 {
-		color: rgba(255, 255, 255, 0.5);
-		font-size: 1.35em;
-		line-height: 1.75em;
-		margin: 0;
-	}
-
-	#hero .image.avatar {
-		margin: 0 0 1em 0;
-		width: 6.25em;
-	}
   
   
   #footer {
@@ -200,7 +118,7 @@
   
   
 	#main {
-    border: 1px solid red;
+    x-border: 1px solid red;
 		margin-left: 35%;
 		max-width: 54em;
 		padding: 8em 4em 4em 4em;
@@ -232,12 +150,10 @@ header {
 
 #brand img {
   float: left;
-  box-sizing: content-box;
   width: 36px;
   height: 36px;
-  margin-right: 10px;
-  border-radius: 50%;
-  padding: 10px 0;
+  margin: 10px 10px 10px 0;
+  border-radius: 100%;
 }
 
 #brand .text {
