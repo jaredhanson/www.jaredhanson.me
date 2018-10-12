@@ -7,14 +7,27 @@ block header
         img(src='images/avatar-big.png')
       h1 Jared Hanson
       
-    footer#footer
+    .social
       .inner
         ul.icons
           li
-            a.icon.fa-twitter
+            a.icon.fab.fa-facebook(href='https://www.facebook.com/jaredhanson')
+              span Facebook
+          li
+            a.icon.fab.fa-linkedin(href='https://www.linkedin.com/in/jaredhanson')
+              span LinkedIn
+          li
+            a.icon.fab.fa-twitter(href='https://twitter.com/jaredhanson')
               span Twitter
-        ul.copyright
-          li Untitled
+          li
+            a.icon.fab.fa-github(href='https://github.com/jaredhanson')
+              span GitHub
+          li
+            a.icon.fab.fa-angellist(href='https://angel.co/jaredhanson')
+              span AngelList
+          li
+            a.icon.fas.fa-rss(href='/blog/')
+              span Blog
       
 block content
   div#main
@@ -22,15 +35,3 @@ block content
       header
         h2 Ipsum lorem dolor aliquam ante commodo magna sed accumsan arcu neque.
       |!{content} 
-
-  footer#footer
-    .inner
-      ul.icons
-        li
-          a.icon.fa-twitter(href='https://twitter.com/jaredhanson')
-            span Twitter
-        li
-          a.icon.fa-blog(href='/blog/')
-            span Blog
-      ul.copyright
-        li Untitled

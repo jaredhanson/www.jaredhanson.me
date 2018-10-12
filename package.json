@@ -28,6 +28,7 @@
     "node": "8.x.x"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.4.1",
     "@kerouac/main": "0",
     "@kerouac/robots": "0.0.1",
     "@kerouac/sitemap": "0.0.1",
