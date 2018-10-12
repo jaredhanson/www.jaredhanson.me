@@ -1,7 +1,7 @@
 extends ./layout
 
-block feed
-  article#feed.hentry
+block document
+  article.hentry
     h1.entry-title
       a(rel='bookmark', href=absoluteURL)= title
     p.metadata

@@ -1,16 +1,20 @@
-#feed {
-  float: left;
-  width: 640px;
-  margin: 0 auto;
-  border: 1px solid blue;
-}
-
-#sidebar {
-  float: right;
-  width: 320px;
-  border: 1px solid red;
-
-  img {
-    margin: 10px;
+#blog {
+  
+  .content {
+    float: left;
+    width: 640px;
+    margin: 0 auto;
+    border: 1px solid blue;
   }
+
+  aside {
+    float: right;
+    width: 320px;
+    border: 1px solid red;
+
+    img {
+      margin: 10px;
+    }
+  }
+  
 }
