@@ -1,40 +1,36 @@
-doctype html
-html(prefix='og: http://ogp.me/ns#', lang='en')
-  head
-    title= title
-    meta(charset='utf-8')
-    link(rel='stylesheet', href='/assets/styles/all.css')
+extends ./layout
     
-  body#home
-    header#header
-      .inner
-        a.image.avatar(href='/', alt='Jared Hanson')
-          img(src='images/avatar.jpg')
-        h1 Jared Hanson
-        
-      footer#footer
-        .inner
-          ul.icons
-            li
-              a.icon.fa-twitter
-                span Twitter
-          ul.copyright
-            li Untitled
+block header
+  header#header
+    .inner
+      a.image.avatar(href='/', alt='Jared Hanson')
+        img(src='images/avatar.jpg')
+      h1 Jared Hanson
       
-    div#main
-      section
-        header
-          h2 Ipsum lorem dolor aliquam ante commodo magna sed accumsan arcu neque.
-        |!{content} 
-
     footer#footer
       .inner
         ul.icons
           li
-            a.icon.fa-twitter(href='https://twitter.com/jaredhanson')
+            a.icon.fa-twitter
               span Twitter
-          li
-            a.icon.fa-blog(href='/blog/')
-              span Blog
         ul.copyright
           li Untitled
+      
+block content
+  div#main
+    section
+      header
+        h2 Ipsum lorem dolor aliquam ante commodo magna sed accumsan arcu neque.
+      |!{content} 
+
+  footer#footer
+    .inner
+      ul.icons
+        li
+          a.icon.fa-twitter(href='https://twitter.com/jaredhanson')
+            span Twitter
+        li
+          a.icon.fa-blog(href='/blog/')
+            span Blog
+      ul.copyright
+        li Untitled
