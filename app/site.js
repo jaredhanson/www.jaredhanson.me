@@ -1,4 +1,4 @@
-exports = module.exports = function(blog, sitemapProtocol, robotsProtocol, cname) {
+exports = module.exports = function(blog, sitemapProtocol, robotsProtocol) {
   var kerouac = require('kerouac');
   
   
