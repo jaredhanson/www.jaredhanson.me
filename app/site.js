@@ -1,4 +1,4 @@
-exports = module.exports = function(blog, sitemap, robots, cname) {
+exports = module.exports = function(blog, sitemap, robotsProtocol, cname) {
   var kerouac = require('kerouac');
   
   
@@ -13,7 +13,7 @@ exports = module.exports = function(blog, sitemap, robots, cname) {
   site.use('/blog', blog);
 
   site.use(sitemap);
-  site.use(robots);
+  site.use(robotsProtocol);
   
   return site;
 };
@@ -21,5 +21,5 @@ exports = module.exports = function(blog, sitemap, robots, cname) {
 exports['@require'] = [
   'http://i.kerouacjs.org/blog/Site',
   'http://i.kerouacjs.org/www/sitemap/Site',
-  'http://i.kerouacjs.org/www/robots/Site'
+  'org.kerouacjs/robots/protocol'
 ];
