@@ -1,45 +1,5 @@
 {
   "name": "www.jaredhanson.me",
   "version": "0.0.0",
-  "private": true,
-  "scripts": {},
-  "dependencies": {
-    "@modulate/social-notifications-trackback": "git+https://github.com/modulate/nodex-social-notifications-trackback.git",
-    "bixby": "^0.2.1",
-    "bixby-common": "^0.1.3",
-    "bixby-express": "^0.2.0",
-    "bixby-http": "^0.2.0",
-    "bixby-ms": "github:bixbyjs/bixby-ms",
-    "crane": "github:jaredhanson/crane",
-    "dotenv": "^4.0.0",
-    "express": "^4.16.2",
-    "nodex-social-linkback": "git+https://github.com/modulate/nodex-social-notifications-linkback.git",
-    "pug": "^2.0.0-rc.4",
-    "request": "^2.83.0",
-    "xtraverse": "^0.1.0"
-  },
-  "x_dependencies": {
-    "bixby-ms": "github:bixbyjs/bixby-ms",
-    "bixby-ms-amqp": "github:bixbyjs/bixby-ms-amqp",
-    "bixby-ms-zeromq": "github:bixbyjs/bixby-ms-zeromq",
-    "@modulate/bixby-ms-gcp": "git+https://github.com/modulate/bixby-ms-gcp.git"
-  },
-  "engines": {
-    "node": "8.x.x"
-  },
-  "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.4.1",
-    "@kerouac/main": "0",
-    "@kerouac/robots": "0.0.1",
-    "@kerouac/sitemap": "0.0.1",
-    "chai": "^4.1.2",
-    "chai-express-handler": "0.0.2",
-    "kerouac": "^0.1.0",
-    "kerouac-blog": "0",
-    "make-node": "^0.3.5",
-    "mocha": "^5.2.0",
-    "node-sass": "^4.9.3",
-    "proxyquire": "^2.1.0",
-    "sinon": "^6.1.3"
-  }
+  "private": true
 }
