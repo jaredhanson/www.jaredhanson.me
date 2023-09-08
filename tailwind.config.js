@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./layouts/*.ejs"],
+  content: ["./layouts/*.ejs", "./layouts/**/*.ejs"],
   theme: {
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
