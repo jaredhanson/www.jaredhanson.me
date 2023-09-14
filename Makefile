@@ -1,7 +1,7 @@
 all: site css
 
 css:
-	npx tailwindcss -i ./src/input.css -o ./public/assets/styles/screen.css
+	npx tailwindcss -i ./src/input.css -o ./_site/assets/styles/screen.css
 
 site:
 	node site.js
