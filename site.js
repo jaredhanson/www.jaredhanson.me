@@ -2,9 +2,8 @@ var kerouac = require('kerouac');
 kerouac.blog = require('kerouac-blog');
 
 var site = kerouac();
-site.set('output', 'public');
 
-var blog = new kerouac.blog.FSBlog();
+var blog = new kerouac.blog.Blog();
 
 site.use('/', kerouac.blog(blog));
 site.page('/index.html', require('./handlers/home')(blog));
