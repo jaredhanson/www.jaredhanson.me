@@ -1,20 +1,22 @@
 var kerouac = require('kerouac');
-var blog = require('kerouac-blog');
+kerouac.blog = require('kerouac-blog');
 
 var site = kerouac();
 site.set('output', 'public');
-//site.engine('pug', require('pug'));
 
-site.use('/blog', blog());
+var blog = new kerouac.blog.FSBlog();
+
+site.use('/', kerouac.blog(blog));
+site.page('/index.html', require('./handlers/home')(blog));
 site.use(kerouac.content('content'));
 
 
 site.generate({
   '/': [
     kerouac.content.createMapper(),
-    //kerouac.assets.createMapper()
-  ],
-  '/blog': blog.createMapper(),
+    //kerouac.assets.createMapper(),
+    kerouac.blog.createMapper(blog),
+  ]
   },
   function(err) {
     console.log('DONE!');
