@@ -8,11 +8,13 @@ var blog = new kerouac.blog.Blog();
 site.use('/', kerouac.blog(blog));
 site.page('/index.html', require('./handlers/home')(blog));
 site.use(kerouac.content('content'));
+site.use(kerouac.assets('assets'));
 
 
 site.generate({
   '/': [
     kerouac.content.createMapper(),
+    kerouac.assets.createMapper(),
     //kerouac.assets.createMapper(),
     kerouac.blog.createMapper(blog),
   ]
