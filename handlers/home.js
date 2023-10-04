@@ -1,33 +1,33 @@
-exports = module.exports = function(blog) {
-  
-  function fetchArticles(page, next) {
-    blog.entries(function(err, articles) {
-      if (err) { return next(err); }
-      
-      console.log(articles);
-      next();
-    });
-  }
+exports = module.exports = function() {
   
   function fetchResume(page, next) {
     page.locals.resume = [ {
+      company: 'Okta',
+      title: 'Principal Product Architect',
+      //logo: 'images/OKTA.svg', // https://companieslogo.com/okta/logo/
+      logo: 'images/aspera_logo.svg',
+      start: '2019',
+      end: 'Present',
+    }, {
       company: 'Auth0',
       title: 'Chief Architect',
-      logo: 'images/auth0.svg',
+      logo: 'images/4691528_auth0_icon.svg', // https://www.iconfinder.com/icons/4691528/auth0_icon
       start: '2105',
       end: '2019',
     } ];
+    page.locals.resume = [];
+    next();
   }
   
-  function render(page, next) {
+  function blog(page, next) {
+    page.layout = 'home';
     page.locals.title = 'Jared Hanson';
-    page.render('home');
+    next('route');
   }
   
   return [
-    fetchArticles,
     fetchResume,
-    render
+    blog
   ]
   
 };
