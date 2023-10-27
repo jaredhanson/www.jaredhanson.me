@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <link rel="alternate" type="text/html" href="https://www.jaredhanson.me/"/>
+  <link rel="self" type="application/atom+xml" href="https://www.jaredhanson.me/feed.atom"/>
+  <entry>
+    <id>https://www.jaredhanson.me/2023/10/27/hello/</id>
+    <title>Hello</title>
+    <link href="https://www.jaredhanson.me/2023/10/27/hello/"/>
+    <published>2023-10-27T00:00:00Z</published>
+    <content type="html">&lt;p&gt;As someone who is passionate about &lt;a href=&quot;https://en.wikipedia.org/wiki/Digital_identity&quot;&gt;digital identity&lt;/a&gt;,
+I’ve often lamented the fact that my own online presence is quite fragmented,
+scattered across various social networks.  I’m going to consolidate my
+existence here on this site, where I’ll share my thoughts and connect with
+others.&lt;/p&gt;
+&lt;p&gt;I previously published a (long since defunct) personal blog during the rise of
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Web_2.0&quot;&gt;Web 2.0&lt;/a&gt;, a time filled with excitement
+about building technology that empowers and connects people.  This was a
+formative time for me and my career, where I became immersed in &lt;a href=&quot;https://en.wikipedia.org/wiki/OpenID&quot;&gt;OpenID&lt;/a&gt;
+and &lt;a href=&quot;https://en.wikipedia.org/wiki/OAuth&quot;&gt;OAuth&lt;/a&gt;, and the broader issues of
+identity, security, and privacy on the Internet.&lt;/p&gt;
+&lt;p&gt;In the nearly two decades since, the principles of Web 2.0, along with the
+simultaneous rise of &lt;a href=&quot;https://en.wikipedia.org/wiki/Cloud_computing&quot;&gt;cloud&lt;/a&gt; and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Mobile_computing&quot;&gt;mobile&lt;/a&gt; computing, have
+reshaped how society interacts.  While, in my opinion, the impact has been
+positive, it is also evident that the way the technology has been applied has
+fallen short of delivering on its promises.  Those shortcomings have led people
+to look for alternative solutions.&lt;/p&gt;
+&lt;p&gt;There’s a recent trend of people &lt;a href=&quot;https://neustadt.fr/essays/the-small-web/&quot;&gt;rediscovering&lt;/a&gt;,
+&lt;a href=&quot;https://ar.al/2020/08/07/what-is-the-small-web/&quot;&gt;advocating&lt;/a&gt; for, and
+&lt;a href=&quot;https://benhoyt.com/writings/the-small-web-is-beautiful/&quot;&gt;building&lt;/a&gt; what has
+become known as the “small web.&amp;quot;  A new &lt;a href=&quot;https://kagi.com/&quot;&gt;search engine&lt;/a&gt; is
+even &lt;a href=&quot;https://blog.kagi.com/small-web&quot;&gt;differentiating&lt;/a&gt; based on this movement.
+This trend harkens back to the even earlier &lt;a href=&quot;https://en.wikipedia.org/wiki/Web_2.0#Web_1.0&quot;&gt;Web 1.0&lt;/a&gt;
+era.&lt;/p&gt;
+&lt;p&gt;While some of this might be dismissed as retro-nostalgia, there’s a parallel
+trend of people building next generation technology under the auspices of &lt;a href=&quot;https://en.wikipedia.org/wiki/Web3&quot;&gt;Web3&lt;/a&gt;.
+These projects take a more disruptive approach, relying on blockchains and
+recent advances in cryptography to give people more control.  Even in the middle
+of (yet another) &lt;a href=&quot;https://techcrunch.com/2023/10/02/web3-venture-funding-q3/&quot;&gt;crypto winter&lt;/a&gt;,
+more projects are being launched every week, adding to a list that is already
+too long to enumerate.&lt;/p&gt;
+&lt;p&gt;While some people in each of these factions express dissent at both the current
+state of affairs and its associated technology, I don’t share that view.
+Rather than supplanting each other, as the version numbering notation might
+suggest, the technology from each of these eras is symbiotic - better if it
+coexists.  And while corporate-controlled platforms have become overwhelmingly
+dominant, connecting with businesses and trusted third parties is crucial even
+when individuals are given more control.&lt;/p&gt;
+&lt;p&gt;With a perspective that now spans three generations of web technology, I’m
+going to use this space to explore what&amp;#39;s next, continue building for today, and
+reflect on the past.  I hope the insights will help create better technology
+that works better for everyone.  If you are interested, I hope you’ll join me.
+Let’s go!&lt;/p&gt;</content>
+  </entry>
+</feed>
