@@ -67,7 +67,7 @@
 														<h1 class="mt-6 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"><%= title %></h1>
 														<time datetime="2000-01-01" class="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500">
 															<span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span>
-															<span class="ml-3">2000-01-01</span>
+															<span class="ml-3"><%= publishedAt.getFullYear() %>-<%= publishedAt.getMonth() %>-<%= publishedAt.getDate() %></span>
 														</time>
 													</header>
 													<div class="mt-8 prose dark:prose-invert">

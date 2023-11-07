@@ -4,18 +4,42 @@ exports = module.exports = function() {
     page.locals.resume = [ {
       company: 'Okta',
       title: 'Principal Product Architect',
-      //logo: 'images/OKTA.svg', // https://companieslogo.com/okta/logo/
-      logo: 'images/aspera_logo.svg',
+      logo: 'images/okta.png',
       start: '2019',
       end: 'Present',
     }, {
       company: 'Auth0',
       title: 'Chief Architect',
-      logo: 'images/4691528_auth0_icon.svg', // https://www.iconfinder.com/icons/4691528/auth0_icon
-      start: '2105',
+      logo: 'images/auth0.png',
+      start: '2015',
       end: '2019',
+    }, {
+      company: 'NodePrime',
+      title: 'Software Engineer',
+      logo: 'images/nodeprime.png',
+      start: '2013',
+      end: '2015',
+      black_background: true
+    }, {
+      company: 'Sifteo',
+      title: 'Software Developer',
+      logo: 'images/sifteo.png',
+      start: '2011',
+      end: '2013'
+    }, {
+      company: 'Aspera',
+      title: 'Software Engineer',
+      logo: 'images/aspera.png', // https://www.iconfinder.com/icons/4691528/auth0_icon
+      start: '2005',
+      end: '2011',
+    }, {
+      company: 'Innovative Systems',
+      title: 'Software Engineer',
+      logo: 'images/innovative-systems.png', // https://www.iconfinder.com/icons/4691528/auth0_icon
+      start: '2003',
+      end: '2005',
     } ];
-    page.locals.resume = [];
+    //page.locals.resume = [];
     next();
   }
   

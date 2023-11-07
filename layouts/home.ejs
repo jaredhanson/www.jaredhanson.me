@@ -106,22 +106,23 @@
 								<div class="mx-auto max-w-2xl lg:max-w-5xl">
 									<div class="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
 										<div class="flex flex-col gap-16">
+											<% entries.forEach(function(entry) { %>
 											<article class="group relative flex flex-col items-start">
 												<h2 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
 													<div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
-													<a href="/">
+													<a href="<%= entry.url %>">
 														<span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
-														<span class="relative z-10">Insert title here</span>
+														<span class="relative z-10"><%= entry.title %></span>
 													</a>
 												</h2>
 												<time datetime="2000-01-01" class="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5">
 													<span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
 														<span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span>
 													</span>
-													2000-01-01
+													<%= entry.publishedAt.getFullYear() %>-<%= entry.publishedAt.getMonth() %>-<%= entry.publishedAt.getDate() %>
 												</time>
 												<p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-													Lorem ipsum
+													<%= entry.excerpt %>
 												</p>
 												<div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500">
 													Read article
@@ -130,6 +131,7 @@
 													</svg>
 												</div>
 											</article>
+											<% }); %>
 										</div>
 										<div class="space-y-10 lg:pl-16 xl:pl-24">
 											<div class="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
@@ -143,7 +145,7 @@
 												<ol class="mt-6 space-y-4">
 													<% resume.forEach(function(job) { %>
 													<li class="flex gap-4">
-														<div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+														<div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 <% if (job.black_background) { %>bg-black<% } %>">
 															<img alt="" loading="lazy" width="32" height="32" decoding="async" data-nimg="1" class="h-7 w-7" style="color:transparent" src="<%= job.logo %>">
 														</div>
 														<dl class="flex flex-auto flex-wrap gap-x-2">
