@@ -9,6 +9,7 @@ var blog = new kerouac.blog.Blog();
 site.page('/index.html', require('./handlers/home')());
 site.use('/', kerouac.blog(blog));
 site.use(kerouac.content('content'));
+site.use(require('kerouac-robotstxt')());
 site.use(kerouac.assets('assets'));
 
 
@@ -18,6 +19,7 @@ site.generate({
     kerouac.assets.createMapper(),
     //kerouac.assets.createMapper(),
     kerouac.blog.createMapper(blog),
+    require('kerouac-robotstxt').createMapper()
   ]
   },
   function(err) {
